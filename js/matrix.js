@@ -51,7 +51,7 @@ const lines = [
     "[2026 - Present] >> HCL Technologies — Specialist",
     "  Location     : Noida, India",
     "  Client       : Ahold Delhaize (Fortune 500 Retail)",
-    "  Role         : IBM z/OS Production Support",
+    "  Role         : Control-M Admin & Scheduling",
     "  Tools        : Control-M | OMEGAMON | SDSF | ServiceNow",
     "  Focus        : Workflow Orchestration | HA | SLA Management",
     "",
