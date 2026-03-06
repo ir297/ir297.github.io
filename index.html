@@ -177,19 +177,26 @@
     </div>
     <div class="contact-grid">
         <div class="contact-info">
-            <p>Open to opportunities in <span class="highlight">Generative AI Engineering</span> and <span class="highlight">Platform Architecture</span>. Let's connect.</p>
+            <p>Open to opportunities in <span class="highlight">Generative AI Engineering</span> and
+            <span class="highlight">Platform Architecture</span>. Let's connect.</p>
             <div class="contact-links">
-                <a href="mailto:rithik2907@gmail.com" class="contact-link"><i class="fas fa-envelope"></i> rithik2907@gmail.com</a>
-                <a href="https://linkedin.com/in/rithik-jha-283825196" target="_blank" class="contact-link"><i class="fab fa-linkedin"></i> linkedin.com/in/rithik-jha-283825196</a>
-                <a href="https://github.com/ir297" target="_blank" class="contact-link"><i class="fab fa-github"></i> github.com/ir297</a>
+                <a href="mailto:rithik2907@gmail.com" class="contact-link">
+                    <i class="fas fa-envelope"></i> rithik2907@gmail.com
+                </a>
+                <a href="https://linkedin.com/in/rithik-jha-283825196" target="_blank" class="contact-link">
+                    <i class="fab fa-linkedin"></i> linkedin.com/in/rithik-jha-283825196
+                </a>
+                <a href="https://github.com/ir297" target="_blank" class="contact-link">
+                    <i class="fab fa-github"></i> github.com/ir297
+                </a>
             </div>
         </div>
-        <div class="contact-form">
-            <input type="text" placeholder="> Your Name" />
-            <input type="email" placeholder="> Your Email" />
-            <textarea placeholder="> Your Message"></textarea>
-            <a href="#" class="btn">Send Message</a>
-        </div>
+        <form action="https://formspree.io/f/myknynvg" method="POST" class="contact-form">
+            <input type="text" name="name" placeholder="> Your Name" required />
+            <input type="email" name="email" placeholder="> Your Email" required />
+            <textarea name="message" placeholder="> Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
     </div>
 </section>
 
