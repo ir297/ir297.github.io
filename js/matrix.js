@@ -68,7 +68,7 @@ const lines = [
     "  Target       : Enterprise Technology & Operations Management",
     "",
     ">> Status      : ACCESS GRANTED ✓",
-    ">> Next Mission: Leadership & Operations Management"
+//    ">> Next Mission: Leadership & Operations Management"
 ];
 
 const terminalContent = document.getElementById("terminal-content");
