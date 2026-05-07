@@ -51,7 +51,7 @@ const lines = [
     "[2026 - Present] >> HCL Technologies — Specialist",
     "  Location     : Noida, India",
     "  Client       : Ahold Delhaize (Fortune 500 Retail)",
-    "  Role         : Control-M Admin & Scheduling",
+    "  Role         : Control-M Admin | IBM z/OS Production Support",
     "  Tools        : Control-M | OMEGAMON | SDSF | ServiceNow",
     "  Focus        : Workflow Orchestration | HA | SLA Management",
     "",
@@ -63,8 +63,12 @@ const lines = [
     "  Achievement  : 2,700+ incidents resolved in 6 months",
     "  Achievement  : ~15% MTTR improvement via RCA",
     "",
+    "[In Progress]   >> MBA — Manipal University Jaipur",
+    "  Focus        : Business Strategy | Operations | Leadership",
+    "  Target       : Enterprise Technology & Operations Management",
+    "",
     ">> Status      : ACCESS GRANTED ✓",
-    ">> Next Mission: Generative AI Platform Engineering"
+    ">> Next Mission: Leadership & Operations Management"
 ];
 
 const terminalContent = document.getElementById("terminal-content");
