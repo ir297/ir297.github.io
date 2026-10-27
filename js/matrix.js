@@ -32,7 +32,12 @@ function drawMatrix() {
         drops[i]++;
     });
 }
-setInterval(drawMatrix, 40);
+let matrixTimer;
+function startMatrix() {
+    if (!matrixTimer) matrixTimer = setInterval(drawMatrix, 40);
+}
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) startMatrix();
+else drawMatrix();
 
 
 // ================= IMAGE SHRINK ON SCROLL =================
@@ -48,27 +53,28 @@ window.addEventListener("scroll", () => {
 const lines = [
     "$ cat career_history.log",
     "",
-    "[2026 - Present] >> HCL Technologies — Specialist",
+    "[Jan 2026 - Present] >> HCLTech — Specialist",
     "  Location     : Noida, India",
-    "  Client       : Ahold Delhaize (Fortune 500 Retail)",
-    "  Role         : Control-M Admin | IBM z/OS Production Support",
-    "  Tools        : Control-M | OMEGAMON | SDSF | ServiceNow",
-    "  Focus        : Workflow Orchestration | HA | SLA Management",
+    "  Client       : Fortune 500 retail organization",
+    "  Role         : Control-M Administration | Output Management | IBM z/OS Production Support",
+    "  Tools        : Control-M | Control-M Agents | BMC Control-D (Output) | SDSF | ServiceNow",
+    "  Upgrade      : Testing Control-M 9.0.20.200 → 9.0.22 with senior admin and BMC Support",
+    "  AJF          : Preventing hundreds of obsolete test jobs from loading into the AJF",
+    "  Output tools : CA DocView | CA Output Management | Broadcom OM WebViewer",
     "",
     "[2023 - 2025]   >> Ensono — Associate DC Operations Analyst",
     "  Location     : Pune, India",
-    "  Clients      : Dun & Bradstreet | Ameriprise | West Bend",
-    "               : SSAB | First Bank | BMC | ADM",
-    "  Role         : 24x7 Mainframe & Distributed Systems Ops",
-    "  Achievement  : 2,700+ incidents resolved in 6 months",
-    "  Achievement  : ~15% MTTR improvement via RCA",
+    "  Scope        : 24x7 Mainframe & Distributed Systems Operations",
+    "  Clients      : 7 Fortune 500 clients plus 2 other client environments",
+    "  Achievement  : 2,700+ production incidents handled in 6 months",
+    "  Focus        : Batch recovery | Mainframe operations | Production support",
     "",
     "[In Progress]   >> MBA — Manipal University Jaipur",
     "  Focus        : Business Strategy | Operations | Leadership",
     "  Target       : Enterprise Technology & Operations Management",
     "",
     ">> Status      : ACCESS GRANTED ✓",
-    ">> Next Mission: Leadership & Operations Management"
+    ">> Next Mission: Workload Automation & Production Support"
 ];
 
 const terminalContent = document.getElementById("terminal-content");
@@ -86,6 +92,10 @@ function typeLine(text, index, callback) {
 }
 
 function startTyping() {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        terminalContent.textContent = lines.join("\n");
+        return;
+    }
     let i = 0;
     function nextLine() {
         if (i < lines.length) {
@@ -96,8 +106,6 @@ function startTyping() {
     }
     nextLine();
 }
-
-
 // ================= SCROLL REVEAL ANIMATIONS =================
 
 const observer = new IntersectionObserver((entries) => {
@@ -119,5 +127,6 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, { threshold: 0.15 });
 
-document.querySelectorAll(".about, .experience, .skills, .why, .projects, .contact")
+document.querySelectorAll(".about, .experience, .skills, .credentials, .projects, .contact")
     .forEach(el => observer.observe(el));
+
